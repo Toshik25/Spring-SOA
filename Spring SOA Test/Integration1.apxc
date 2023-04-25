@@ -1,0 +1,15 @@
+public class Integration1 {
+	public static void myMethod(){
+        http htp = new http();
+        httprequest req = new httprequest(); 
+        httpresponse res = new httpresponse();
+        
+        req.setEndpoint('callout:bar');
+        req.setMethod('GET');
+
+		res = htp.send(req);
+        
+        	string jstr= res.getBody();
+				system.debug('data ='+jstr);
+    }
+}
